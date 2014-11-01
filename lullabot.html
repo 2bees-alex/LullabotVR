@@ -8,7 +8,6 @@
 <Assets>
 <AssetObject id="object_6inch_robot.dwg" src="6inch_robot.dwg.obj" mtl="6inch_robot.dwg.mtl" />
 <AssetObject id="arch" src="arch.obj" mtl="arch.mtl" />
-<AssetObject id="strap-rocket-model" src="strap-rocket.obj" mtl="strap-rocket.mtl" />
 <AssetImage id="awesome" src="assets/img/awesome.jpg" />
 <AssetImage id="bens-castle-2" src="assets/img/bens-castle-2.jpg" />
 <AssetImage id="bens-castle" src="assets/img/bens-castle.jpg" />
@@ -30,9 +29,8 @@
 </Assets>
 <Room use_local_asset="room_plane" pos="0.000 -0.100 -20.000" xdir="1.000 0.000 0.000" ydir="0.000 1.000 0.000" zdir="0.000 0.000 1.000" col="1.000 0.500 0.500">
 <Object id="object_6inch_robot.dwg" js_id="159" pos="36.000 0.000 72.000" xdir="-1.000 0.000 0.000" ydir="0.000 0.000 1.000" zdir="0.000 1.000 0.000" scale="50.000 50.000 50.000" />
-<Object id="object_6inch_robot.dwg" js_id="233" pos="-1.000 0.000 -0.100" xdir="-0.725 -0.004 -0.688" ydir="-0.688 0.004 0.725" zdir="0.000 1.000 -0.006" />
+<Object id="object_6inch_robot.dwg" js_id="233" onclick="room.botClick()" pos="-1.000 0.000 -0.100" xdir="-0.725 -0.004 -0.688" ydir="-0.688 0.004 0.725" zdir="0.000 1.000 -0.006" />
 <Object id="arch" js_id="234" pos="4.500 0.000 -17.900" xdir="-0.259 0.000 -0.966" ydir="-0.966 0.000 0.259" zdir="0.000 1.000 -0.000" />
-<Object id="strap-rocket-model" js_id="235" pos="-7.200 0.500 0.700" xdir="0.000 0.087 0.996" ydir="0.000 0.996 -0.087" zdir="-1.000 0.000 0.000" />
 <Image id="awesome" js_id="160" onclick="room.buttonClick('awesome')" pos="-3.000 4.000 74.100" xdir="0.000 0.000 1.000" ydir="0.000 1.000 0.000" zdir="-1.000 0.000 0.000" scale="0.800 0.800 1.000" />
 <Image id="bens-castle-2" js_id="161" onclick="room.buttonClick('bens-castle-2')" pos="-21.000 55.700 87.000" xdir="0.000 0.000 -1.000" ydir="0.000 1.000 0.000" zdir="1.000 0.000 0.000" />
 <Image id="bens-castle" js_id="162" onclick="room.buttonClick('bens-castle')" pos="-22.700 58.500 84.500" xdir="0.000 0.000 -1.000" ydir="0.000 1.000 0.000" zdir="1.000 0.000 0.000" scale="3.800 5.400 1.000" />
@@ -50,9 +48,11 @@
 <Image id="kyle-day" js_id="174" onclick="room.buttonClick('kyle-day')" pos="-23.000 11.000 84.000" xdir="0.000 0.000 1.000" ydir="0.000 1.000 0.000" zdir="-1.000 0.000 0.000" scale="4.000 4.000 1.000" />
 <Image id="sally-baby" js_id="175" onclick="room.buttonClick('sally-baby')" pos="-35.400 12.700 84.900" xdir="0.000 0.000 1.000" ydir="0.000 1.000 0.000" zdir="-1.000 0.000 0.000" scale="7.000 7.000 1.000" />
 <Image id="strap-rocket" js_id="176" onclick="room.buttonClick('strap-rocket')" pos="26.800 94.000 82.300" xdir="0.000 0.500 -0.866" ydir="-1.000 0.000 0.000" zdir="0.000 0.866 0.500" />
-<Text js_id="console" pos="3.412 0.999 -16.060" xdir="-1.000 0.000 0.000" ydir="0.000 1.000 0.000" zdir="0.000 0.000 -1.000">You have found 0 of 17 memes.</Text>
 <Text js_id="console1" pos="0.000 2.000 0.000" xdir="-1.000 0.000 0.000" ydir="0.000 1.000 0.000" zdir="0.000 0.000 -1.000">console1</Text>
 <Link pos="4.500 0.000 -17.900" xdir="0.259 0.000 0.966" ydir="-0.000 1.000 0.000" zdir="-0.966 -0.000 0.259" url="http://jeradbitner.com/MatrixVR/index.html" col="0.660 0.690 1.000" scale="1.800 2.500 1.000" title="MatrixVR Room" />
+
+<Text js_id="TextPlayerPosition" pos="-7.127 1.573 -0.443" xdir="0.719 0.000 0.695" ydir="0.000 1.000 0.000" zdir="-0.693 -0.074 0.717" scale="0.500 0.500 0.000" col="0.000 1.000 0.000">pos : [X : -7.8][Y : 0][Z : 0.3]</Text>
+<Text js_id="console" pos="3.412 0.999 -16.060" xdir="-1.000 0.000 0.000" ydir="0.000 1.000 0.000" zdir="0.000 0.000 -1.000" col="0.000 1.000 0.000">You have found 0 of 17 memes.</Text>
 </Room>
 </FireBoxRoom>
 </body>

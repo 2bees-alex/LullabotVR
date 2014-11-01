@@ -38,7 +38,7 @@ room.buttonClick = function (id) {
   // room.objects['console'].text = cmlength + " " + clicked_memes;
 
   // compare the clicked_memes with the list of memes
-  if (memes.length = clicked_memes.length) {
+  if (memes.length === clicked_memes.length) {
     room.objects['console'].text = "Congrats! You found all " + memes.length + "memes!";
     // todo: reposition all images & makes them swirl around the 'player'
   }
@@ -49,9 +49,33 @@ room.update = function (dt) {
   // setting an elements .pos to this will keep in in the user's view
   var console_pos = translate(player.pos, Vector(1));
 
-  // set the console to follow the player
-  room.objects['console'].pos = translate(player.pos, Vector(1));
+  // Rudimentary HUD, follows the player and faces the player.
   room.objects['console'].text = "You have found " + cmlength + " of " + mlength + " memes.";
 
-  // room.objects['console'].fwd = player.view_dir;
+   // I need to create a function that handles this.
+  var offsetPosition = translate(player.pos, player.view_dir);
+  var faceUserFWD = scalarMultiply(player.view_dir, -1); 
+
+  room.objects["console"].pos = translate(offsetPosition, Vector(0, 1.40, 0));
+  room.objects["console"].fwd = faceUserFWD;
+}
+
+room.botClick = function () {
+  room.objects['233'].pos.y = room.objects['233'].pos.y + 1;
+}
+
+// helper functions
+
+// I got tired of seeing the long vector numbers in front of me.
+function cleanUpVectorValues (vector, precision) {
+    return "[X : " + cleanUpFloat(vector.x, precision) + "]"
+         + "[Y : " + cleanUpFloat(vector.y, precision) + "]"
+         + "[Z : " + cleanUpFloat(vector.z, precision) + "]";
+}
+
+// Changing values makes for a weird effect where the text will scale up as there are fewer numbers,
+// and scale down as there are more. after some research, its floating point numbers in JS, 
+// just the nature of the beast.
+function cleanUpFloat(value, precision) {
+  return Math.round(value * precision) / precision;
 }
