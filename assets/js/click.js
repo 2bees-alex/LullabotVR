@@ -51,7 +51,7 @@ room.update = function (dt) {
   var console_pos = translate(player.pos, Vector(1));
 
   // Rudimentary HUD, follows the player and faces the player.
-  room.objects['console'].text = "You have found " + cmlength + " of " + mlength + " memes. room:" + window.location;
+  room.objects['console'].text = "You have found " + cmlength + " of " + mlength + " memes.";
 
    // I need to create a function that handles this.
   var offsetPosition = translate(player.pos, player.view_dir);
