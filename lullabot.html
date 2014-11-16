@@ -26,10 +26,14 @@
 <AssetImage id="sally-baby" src="assets/img/sally-baby.jpg" />
 <AssetImage id="strap-rocket" src="assets/img/strap-rocket.png" />
 <AssetScript src="assets/js/click.js" />
-<AssetWebSurface id="dotcom" src="https://www.lullabot.com" width="1260" height="1024" />
+
+<AssetObject id="plane" src="plane.obj" />
+<AssetWebSurface id="dotcom" src="https://www.lullabot.com" width="1920" height="1080" />
+
 </Assets>
 <Room use_local_asset="room_plane" pos="0.000 -0.100 -20.000" xdir="1.000 0.000 0.000" ydir="0.000 1.000 0.000" zdir="0.000 0.000 1.000" col="1.000 0.500 0.500" default_sounds="false">
-<Object id="viewer" js_id="525" websurface_id="dotcom" pos="6.800 2.400 -0.900" xdir="0.000 -1.000 0.000" ydir="0.000 0.000 -1.000" zdir="1.000 0.000 0.000" scale="1.00 1.00 1.00 1.00" />
+
+<Object id="plane" js_id="487" websurface_id="dotcom" pos="-4.000 1.400 -5.000" xdir="1.000 0.000 0.000" ydir="0.000 0.000 1.000" zdir="0.000 -1.000 0.000" scale="20.300 4.900 12.100" />
 <Object id="object_6inch_robot.dwg" js_id="159" pos="36.000 0.000 72.000" xdir="-1.000 0.000 0.000" ydir="0.000 0.000 1.000" zdir="0.000 1.000 0.000" scale="50.000 50.000 50.000" />
 <Object id="object_6inch_robot.dwg" js_id="233" onclick="room.botClick()" pos="-1.000 0.000 -0.100" xdir="-0.725 -0.004 -0.688" ydir="-0.688 0.004 0.725" zdir="0.000 1.000 -0.006" />
 
@@ -60,6 +64,7 @@
 <Text js_id="console1" pos="0.000 2.000 0.000" xdir="-1.000 0.000 0.000" ydir="0.000 1.000 0.000" zdir="0.000 0.000 -1.000">console1</Text>
 <Text js_id="TextPlayerPosition" pos="-7.127 1.573 -0.443" xdir="0.719 0.000 0.695" ydir="0.000 1.000 0.000" zdir="-0.693 -0.074 0.717" scale="0.500 0.500 0.000" col="0.000 1.000 0.000">pos : [X : -7.8][Y : 0][Z : 0.3]</Text>
 <Text js_id="console" pos="3.412 0.999 -16.060" xdir="-1.000 0.000 0.000" ydir="0.000 1.000 0.000" zdir="0.000 0.000 -1.000" col="0.000 1.000 0.000">You have found 0 of 17 memes.</Text>
+
 </Room>
 </FireBoxRoom>
 </body>
